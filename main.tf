@@ -20,3 +20,10 @@ resource "azurerm_resource_group" "demogit" {
   name = "demo-git-rg"
   location = "centralus"
 }
+resource "azurerm_storage_account" "stgacct" {
+  name = "stgacctnv9876"
+  resource_group_name = "demo-git-rg"
+  location = "centralus"
+  account_tier = "Standard"
+  account_replication_type = "LRS"
+}
